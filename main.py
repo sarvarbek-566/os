@@ -3,7 +3,7 @@ import shutil
 
 def clear_temp():
     # Faqat %temp% papkasi
-    temp_folder = os.path.expandvars("%temp%")  # C:\Users\User\AppData\Local\Temp
+    temp_folder = os.path.expandvars("%temp%")
     
     if os.path.exists(temp_folder):
         print(f"Tozalanmoqda: {temp_folder}")
@@ -11,11 +11,11 @@ def clear_temp():
             item_path = os.path.join(temp_folder, item)
             try:
                 if os.path.isfile(item_path):
-                    os.remove(item_path)  # Fayl o‘chirish
+                    os.remove(item_path)  # Fayl uchirish
                 elif os.path.isdir(item_path):
                     shutil.rmtree(item_path, ignore_errors=True)  # Papka o‘chirish
             except:
-                pass  # Xato bo‘lsa, e’tiborsiz o‘tamiz
+                pass  # Xato bosa etiborsiz utamiz
     else:
         print(f"Papka topilmadi: {temp_folder}")
     
