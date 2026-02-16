@@ -10,7 +10,7 @@ def clear_temp():
             item_path = os.path.join(temp_folder, item)
             try:
                 if os.path.isfile(item_path):
-                    os.remove(item_path)  # Fayl uchirish
+                    os.remove(item_path)
                 elif os.path.isdir(item_path):
                     shutil.rmtree(item_path, ignore_errors=True)  # Papka o‘chirish
             except:
