@@ -1,8 +1,7 @@
 import os
 import shutil
 
-def clear_temp():
-    # Faqat %temp% papkasi
+def clear_temp():
     temp_folder = os.path.expandvars("%temp%")
     
     if os.path.exists(temp_folder):
@@ -15,7 +14,7 @@ def clear_temp():
                 elif os.path.isdir(item_path):
                     shutil.rmtree(item_path, ignore_errors=True)  # Papka o‘chirish
             except:
-                pass  # Xato bosa etiborsiz utamiz
+                pass
     else:
         print(f"Papka topilmadi: {temp_folder}")
     
