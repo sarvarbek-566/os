@@ -12,7 +12,7 @@ def clear_temp():
                 if os.path.isfile(item_path):
                     os.remove(item_path)
                 elif os.path.isdir(item_path):
-                    shutil.rmtree(item_path, ignore_errors=True)  # Papka o‘chirish
+                    shutil.rmtree(item_path, ignore_errors=True) 
             except:
                 pass
     else:
